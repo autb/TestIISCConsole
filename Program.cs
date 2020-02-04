@@ -13,7 +13,7 @@ namespace TestIISCConsole
 {
     internal class Program
     {
-
+        //Path of the IIS Dev projects
         private static string pathDevDirectory = @"C:\Developpement\";
 
         private static void Main(string[] args)
