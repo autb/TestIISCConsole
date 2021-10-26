@@ -153,9 +153,13 @@ namespace TestIISCConsole
                     "/cconsolesso",
                     str1 + "CConsoleSSO"
                   },
+                  //{
+                  //  "/ccwebapi",
+                  //  str1 + "WebApiServer"
+                  //},
                   {
-                    "/ccwebapi",
-                    str1 + "WebApiServer"
+                    "/cmparchapi",
+                    str1 + "CmpArchAPI"
                   },
                   {
                     "/cmparch",
@@ -253,6 +257,18 @@ namespace TestIISCConsole
                                 ConfigurationSection section3 = hostConfiguration.GetSection(str9 + "windowsAuthentication", index + key);
                                 section3.OverrideMode = OverrideMode.Allow;
                                 section3["enabled"] = (object)true;
+                            }
+                            if (key == "/cmparchapi")
+                            {
+                                ConfigurationSection section1 = hostConfiguration.GetSection(str9 + "anonymousAuthentication", index + key);
+                                section1.OverrideMode = OverrideMode.Allow;
+                                //section1["enabled"] = (object)true;
+                                //ConfigurationSection section2 = hostConfiguration.GetSection(str9 + "basicAuthentication", index + key);
+                                //section2.OverrideMode = OverrideMode.Allow;
+                                //section2["enabled"] = (object)false;
+                                //ConfigurationSection section3 = hostConfiguration.GetSection(str9 + "windowsAuthentication", index + key);
+                                //section3.OverrideMode = OverrideMode.Allow;
+                                //section3["enabled"] = (object)true;
                             }
                             element1.Applications.Add(element5);
                         }
